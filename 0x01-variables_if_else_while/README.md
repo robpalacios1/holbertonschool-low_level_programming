@@ -11,5 +11,6 @@
 10. 00...99.
 11. Investing is a combination of brains and materials.
 12. The success combination in bussiness is:Do what you do better...
+13. Software is eating the world
 
 
