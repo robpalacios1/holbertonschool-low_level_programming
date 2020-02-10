@@ -6,19 +6,12 @@
  */
 int main(void)
 {
-char c;
-char C;
-c = 'a';
-C = 'A';
-while (c <= 'z')
+char num;
+num = '0';
+while (num <= '9')
 {
-putchar(c);
- c++;
-}
-while (C <= 'Z')
-{
-putchar(C);
- C++;
+putchar(num);
+num = num + 1;
 }
 putchar('\n');
 return (0);
