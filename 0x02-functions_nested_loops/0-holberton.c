@@ -6,12 +6,13 @@
 */
 int main(void)
 {
-char x[] = "Holberton";
+char *x;
 int i;
+x = "Holberton";
 for (i = 0; i < 9; i++)
 {
-putchar (x[i]);
+_putchar (x[i]);
 }
-putchar('\n');
+_putchar('\n');
 return (0);
 }
