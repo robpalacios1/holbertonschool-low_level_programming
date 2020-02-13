@@ -1,5 +1,10 @@
 #include <stdio.h>
 # define N 1000000000
+/**
+ *main - print fibonacci
+ *
+ *Return: always 0
+ */
 int main()
 {
 unsigned long a,b,r,i,a1,a2,b1,b2,r1,r2;
