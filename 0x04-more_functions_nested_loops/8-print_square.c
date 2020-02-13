@@ -2,7 +2,6 @@
 /**
  *print_square - its print number.
  *@size: parameter of size of function.
- *Return: void.
  */
 void print_square(int size)
 {
@@ -11,7 +10,6 @@ void print_square(int size)
 
 	if (size != 0)
 	{
-
 		for (i = 0; i < size; i++)
 		{
 			for (j = 0; j < size; j++)
