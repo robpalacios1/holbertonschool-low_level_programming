@@ -5,13 +5,13 @@
  *
  *Return: always 0
  */
-int main()
+int main(void)
 {
-unsigned long a,b,r,i,a1,a2,b1,b2,r1,r2;
+unsigned long a, b, r, i, a1, a2, b1, b2, r1, r2;
 a = 1;
 b = 2;
 r = a + b;
-printf ("%lu, %lu, ", a,b);
+printf("%lu, %lu, ", a, b);
 for (i = 0; i < 86; i++)
 {
 printf("%lu, ", r);
@@ -30,9 +30,9 @@ a1 = b1;
 a2 = b2;
 b1 = r1;
 b2 = r2;
-r1 = a1 + b1 + (a2+b2)/N;
-r2 = (a2 +b2) % N;
+r1 = a1 + b1 + (a2 + b2) / N;
+r2 = (a2 + b2) % N;
 }
-printf ("%lu %lu\n", r1,r2);
-return 0;
+printf("%lu %lu\n", r1, r2);
+return (0);
 }
