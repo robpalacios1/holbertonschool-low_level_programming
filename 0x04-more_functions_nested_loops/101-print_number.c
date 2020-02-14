@@ -1,17 +1,24 @@
 #include "holberton.h"
 /**
- * print_number - prins numbers.
- * @n: parameter of void print_number.
+ * print_number - prints an integer
+ * @n: integer to be printed
  */
 void print_number(int n)
 {
+	unsigned int b;
+
 	if (n < 0)
 	{
+		b = -n;
 		_putchar('-');
-		n = (n * (-1));
 	}
-
-	if (n / 10)
-		print_number(n / 10);
-	_putchar(n % 10 + '0');
+	else
+	{
+		b = n;
+	}
+	if (b / 10)
+	{
+		print_number(b / 10);
+	}
+	_putchar((b % 10) + '0');
 }
