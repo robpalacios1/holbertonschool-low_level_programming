@@ -6,15 +6,41 @@
  */
 void rev_string(char *s)
 {
-	int n;
+	int _strlen(char *str), len, c;
 
-	for (n = 0; s[n] != '\0'; n++)
+	char *start, *end, tmp;
+
+	len = _strlen(s);
+
+	start = s;
+	end = s;
+
+	for (c = 0; c < (len - 1); c++)
+		end++;
+
+	for (c = 0; c < (len / 2); c++)
 	{
-		for (n = 0; s[n] != '\0'; n--)
-		{
-			_putchar(s[n]);
-		}
-		_putchar(s[n]);
+		tmp = *start;
+		*start = *end;
+		*end = tmp;
+
+		start++;
+		end--;
 	}
-	_putchar('\n');
+}
+/**
+ * _strlen - find the length of a string
+ * @str: input string pointer
+ *
+ * Return: string length
+ */
+int _strlen(char *str)
+{
+	int i;
+
+	i = 0;
+	while (*(str + i) != '\0')
+		i++;
+
+	return (i);
 }
