@@ -1,4 +1,4 @@
-		<h1><strong><i>Pointers and Arrays String</i></strong></h1>
+		<h1>Pointers and Arrays String</h1>
 
 0)	98 Battery st.
 1)	Don't swap horses in crossing a stream.
