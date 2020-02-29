@@ -5,8 +5,8 @@
  *@argv:return size of array.
  * Return: Always 0.
  */
-int main( int argc, __attribute__((unused)) char *argv[])
+int main(int argc, __attribute__((unused)) char **argv)
 {
-	printf("%i\n", (argc - 1));
-	return(0);
+	printf("%d\n", (argc - 1));
+	return (0);
 }
