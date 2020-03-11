@@ -11,13 +11,22 @@ int int_index(int *array, int size, int (*cmp)(int))
 	int res;
 	int i;
 
-	for (i = 0; i < size; i++)
+	if (array != NULL && cmp != NULL && size > 0)
 	{
-		res = cmp(array[i]);
+		for (i = 0; i < size; i++)
+		{
+			res = cmp(array[i]);
+
 			if (res != 0)
 			{
 				return (i);
 			}
+		}
+
+		if (size <= 0)
+		{
+			return (-1);
+		}
 	}
 	return (-1);
 }
