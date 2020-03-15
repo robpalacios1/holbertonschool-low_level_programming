@@ -13,7 +13,7 @@
 main:
 	mov         rax, 1	; system call for writte
 	mov         rdi, 1	; file handle 1 is stdout
-	mov         rsi, message ; address of string to output
+	mov         rsi, msg 	; address of string to output
 	mov         rdx, msglen	 ; number of bytes
 	syscall			 ; invoke operating system to do the write
 	mov         rax, 60	 ; system call for exit
@@ -21,5 +21,5 @@ main:
 	syscall			 ; invoke operating system to exit
 
 	section     .data
-message:	db          "Hello, Holberton", 10 ; note the newline at the end
-msglen:	equ $ -message
+msg:	db          "Hello, Holberton", 10 ; note the newline at the end
+msglen:	equ $ -msg
