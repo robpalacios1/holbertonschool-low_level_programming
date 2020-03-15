@@ -20,6 +20,6 @@ main:
 	xor         rdi, 0	 ; exit code 0
 	syscall			 ; invoke operating system to exit
 
-	section     .data
+	section     .rodata
 msg:	db          "Hello, Holberton", 10 ; note the newline at the end
 msglen:	equ $ -msg
