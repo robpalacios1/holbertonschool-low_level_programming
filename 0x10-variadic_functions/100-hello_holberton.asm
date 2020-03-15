@@ -16,10 +16,11 @@ main:
 	mov         rsi, msg 	; address of string to output
 	mov         rdx, msglen	 ; number of bytes
 	syscall			 ; invoke operating system to do the write
+
 	mov         rax, 60	 ; system call for exit
 	xor         rdi, 0	 ; exit code 0
 	syscall			 ; invoke operating system to exit
 
-	section     .rodata
+	section     .data
 msg:	db          "Hello, Holberton", 10 ; note the newline at the end
-msglen:	equ $ -msg
+msglen:	equ $ - msg
