@@ -18,7 +18,7 @@ main:
 	syscall				; invoke operating system to do the write
 
 	mov 		rax, 60	 	; system call for exit
-	xor 		rdi, 0	 	; exit code 0
+	mov 		rdi, 0	 	; exit code 0
 	syscall		 		; invoke operating system to exit
 
 	section 	.data
