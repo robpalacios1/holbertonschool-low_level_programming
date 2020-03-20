@@ -4,19 +4,19 @@
  *print_list - prints all elements of e list
  *@h: pointer
  *
- *Return:
+ *Return: number of nodes in the list
  */
 size_t print_list(const list_t *h)
 {
-	const list_t *str;
+	const list_t *aux;
 	unsigned int i;
 
-	str = h;
+	aux = h;
 
-	for (i = 0; str != NULL, i++)
+	for (i = 0; aux != NULL; i++)
 	{
-		printf("[%d] %s\n", str->len, str->string);
-		str = str->next;
+		printf("[%d] %s\n", aux->len, aux->str);
+		aux = aux->next;
 	}
 	return (i);
 }
