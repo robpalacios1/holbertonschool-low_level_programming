@@ -1,27 +1,22 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 #include "lists.h"
 /**
- *print_list - s
+ *print_list - prints all elements of e list
  *@h: pointer
  *
  *Return:
  */
 size_t print_list(const list_t *h)
 {
-	size_t count = 0;
-	const list_t *str = a;
+	const list_t *str;
 	unsigned int i;
 
-	if (str == NULL)
-	{
-		return (0);
-	}
+	str = h;
+
 	for (i = 0; str != NULL, i++)
 	{
 		printf("[%d] %s\n", str->len, str->string);
 		str = str->next;
 	}
-	return (count)
+	return (i);
 }
