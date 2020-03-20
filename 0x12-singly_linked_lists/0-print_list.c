@@ -2,7 +2,7 @@
 #include "lists.h"
 /**
  *print_list - prints all elements of e list
- *@h: pointer
+ *@h: pointer to the start of the list.
  *
  *Return: number of nodes in the list
  */
@@ -12,10 +12,9 @@ size_t print_list(const list_t *h)
 	unsigned int i;
 
 	aux = h;
-
 	for (i = 0; aux; i++)
 	{
-		printf("[%d] %s\n", aux->len, aux->str);
+		printf("[%u] %s\n", aux->len, aux->str);
 		aux = aux->next;
 	}
 	return (i);
