@@ -8,14 +8,14 @@
  */
 size_t print_list(const list_t *h)
 {
-	const list_t *aux;
+	const list_t *tmp;
 	unsigned int i;
 
-	aux = h;
-	for (i = 0; aux; i++)
+	tmp = h;
+	for (i = 0; tmp; i++)
 	{
-		printf("[%u] %s\n", aux->len, aux->str);
-		aux = aux->next;
+		printf("[%u] %s\n", tmp->len, tmp->str);
+		tmp = tmp->next;
 	}
 	return (i);
 }
