@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- *pop_listint - function that delete the head node 
+ *pop_listint - function that delete the head node.
  *@head: head of the list.
  *
  *Return: void.
@@ -13,7 +13,7 @@ int pop_listint(listint_t **head)
 
 	a = *head;
 
-	if (!a)
+	if (a == NULL)
 	{
 		return (0);
 	}
