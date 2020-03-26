@@ -1,5 +1,5 @@
 ~~~
-<h1><i>0x14-bit_manipulation</i></h1>
+# 0x14-bit_manipulation
 ~~~
 ~~~
 0 0   - Write a function that converts a binary number to an unsigned int.
