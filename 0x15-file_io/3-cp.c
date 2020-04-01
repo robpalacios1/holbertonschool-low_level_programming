@@ -4,7 +4,7 @@
  *
  * @argc: argument count
  * @argv: argument vector
- * Return:
+ * Return: copies the content of a file.
  */
 int main(int argc, char *argv[])
 {
@@ -17,19 +17,16 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	}
 	fr = open(argv[1], O_RDONLY);
-
 	if (fr == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	}
 	fw = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, m);
-
 	if (fw == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	rlength = wlength = 1;
-
 	while (rlength)
 	{
 		rlength = read(fr, buf, 1295);
@@ -53,7 +50,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fr), exit(100);
 	}
 	wclose = close(fw);
-
 	if (wclose == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fw), exit(100);
