@@ -5,7 +5,7 @@
  *@filename: filename.
  *@text_content: text content.
  *
- *Return: count.
+ *Return: 1 on success -1 on failure.
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
@@ -16,7 +16,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	a = open(filename, O_WRONLY | O_APPEND);
+	a = open(filename, O_WRONLY | O_APPEND, 600);
 
 	if (a == -1)
 	{
@@ -31,5 +31,5 @@ int append_text_to_file(const char *filename, char *text_content)
 		write(a, text_content, b);
 	}
 	close(a);
-	return (-1);
+	return (1);
 }
