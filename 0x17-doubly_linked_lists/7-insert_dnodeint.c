@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * insert_dnodeint_at_index - inserts node at a given position
  * @h: pointer to a dlistint_t doubly linked list
