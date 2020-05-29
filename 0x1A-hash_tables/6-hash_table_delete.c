@@ -20,7 +20,7 @@ void hash_table_delete(hash_table_t *ht)
 		temp = ht->array[i];
 		while (temp != NULL)
 		{
-			if(a == 1)
+			if (a == 1)
 			{
 				printf(", ");
 			}
