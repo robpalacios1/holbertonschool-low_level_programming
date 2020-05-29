@@ -10,7 +10,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *i, *new;
 	size_t index;
-	char *keycpy, *valcpy;
 
 	if (!key || !value || !ht)
 	{
@@ -24,8 +23,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	index = key_index((const unsigned char *)key, ht->size);
-	keycpy = strdup(key);
-	valcpy = strdup(value);
 	for (i = ht->array[index]; i != NULL; i = i->next)
 	{
 		if (strcmp(i->key, key) == 0)
@@ -34,13 +31,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			{
 				free(i->value);
 			}
-			i->value = valcpy;
+			i->value = strdup(value);
 			free(new);
 			return (1);
 		}
 	}
-	new->key = keycpy;
-	new->value = valcpy;
+	new->key = strdup(key);
+	new->value = strdup(value);
 	new->next = ht->array[index];
 	ht->array[index] = new;
 	return (1);
