@@ -3,7 +3,7 @@
 
 ## Resources
 
-**Read or watch:
+***Read or watch***:
 
 - Makefile
 
