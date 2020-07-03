@@ -26,5 +26,5 @@
 - All your files should end with a new line
 - A README.md file, at the root of the folder of the project, is mandatory
 
-## Author :book
+## Author :book:
 Roberto Palacios [Twitter](https://twitter.com/robpalacios11) | [GitHub](https://github.com/robpalacios1)
